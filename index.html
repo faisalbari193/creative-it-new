@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-BD">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var _fetch = window.fetch ? window.fetch.bind(window) : undefined;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _fetch;
+            },
+            set: function(fn) {
+              _fetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          try {
+            if (typeof Window !== 'undefined' && Window.prototype) {
+              var _protoFetch = Window.prototype.fetch;
+              Object.defineProperty(Window.prototype, 'fetch', {
+                get: function() {
+                  return _protoFetch;
+                },
+                set: function(fn) {
+                  _protoFetch = fn;
+                },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          } catch (_) {}
+        }
+      })();
+    </script>
+    <title>Creative IT Institute | Professional IT Training in Bangladesh</title>
+    <meta name="description" content="Build job-ready skills at Creative IT Institute, Bangladesh. Explore professional courses in graphic design, web development, digital marketing, animation, and more." />
+    <meta property="og:title" content="Creative IT Institute | Professional IT Training in Bangladesh" />
+    <meta property="og:description" content="Build job-ready skills with professional courses in graphic design, web development, digital marketing, animation, and more." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Creative IT Institute | Professional IT Training in Bangladesh" />
+    <meta name="twitter:description" content="Build job-ready skills with professional courses in graphic design, web development, digital marketing, animation, and more." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Lexend:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="font-sans antialiased text-neutral-800 bg-white selection:bg-[#d92228] selection:text-white text-[15px] sm:text-[16px] leading-relaxed">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
